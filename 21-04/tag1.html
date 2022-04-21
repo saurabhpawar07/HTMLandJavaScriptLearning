@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>tags3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>The picture Element</h2>
+
+    <picture>
+        <source media="(min-width:650px)" srcset="img_food.jpg">
+        <source media="(min-width:466px)" srcset="img_car.jpg">
+        <img src="img_girl.jpg">
+    </picture>
+    <p>ze the browser to see different versions of the picture loading at different viewport sizes.
+        The browser looks for the first source element where the media query matches the user's current viewport width,
+        and fetches the image specified in the srcset attribute.</p>
+
+    <p>The img element is required as the last child tag of the picture declaration block.
+        The img element is used to provide backward compatibility for browsers that do not support the picture element,
+        or if none of the source tags matched.
+    </p>
+    <hr>
+    <hr>
+
+
+    <h1>Table</h1>
+    <table style="width:100%">
+        <caption>student info</caption>
+        <tr>
+            <th>
+                name
+            </th>
+            <th>
+                college
+            </th>
+            <th>
+                contact
+            </th>
+
+        </tr>
+        <tr>
+            <td>
+                saurabh
+            </td>
+            <td>
+                sgm
+            </td>
+            <td>
+                2135435435
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                shubham
+            </td>
+            <td>
+                shivaji uni
+            </td>
+            <td>
+                521453212
+            </td>
+        </tr>
+        <tr>
+            <td>
+                jeevan
+            </td>
+            <td>
+                yc
+            </td>
+            <td>
+                326655663
+            </td>
+        </tr>
+        <tr>
+            <td>
+                sagar
+            </td>
+            <td>
+                sgm
+            </td>
+            <td>
+                2136525435
+            </td>
+        </tr>
+    </table><br>
+    <br>
+    <br>
+
+    <h1>style with caption</h1>
+    <table style="width:100%">
+        <caption style="text-align: right; caption-side: bottom;">student info</caption>
+        <tr>
+            <th>
+                name
+            </th>
+            <th>
+                college
+            </th>
+            <th>
+                contact
+            </th>
+
+        </tr>
+        <tr>
+            <td>
+                saurabh
+            </td>
+            <td>
+                sgm
+            </td>
+            <td>
+                2135435435
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                shubham
+            </td>
+            <td>
+                shivaji uni
+            </td>
+            <td>
+                521453212
+            </td>
+        </tr>
+        <tr>
+            <td>
+                jeevan
+            </td>
+            <td>
+                yc
+            </td>
+            <td>
+                326655663
+            </td>
+        </tr>
+        <tr>
+            <td>
+                sagar
+            </td>
+            <td>
+                sgm
+            </td>
+            <td>
+                2136525435
+            </td>
+        </tr>
+    </table>
+    <h1>Table colgroup</h1>
+    <table style="width:100%">
+        <caption>student info</caption>
+        <colgroup>
+            <col span="2" style="background-color: brown;">
+            <col style="background-color: blue;">
+        </colgroup>
+        <tr>
+            <th>
+                name
+            </th>
+            <th>
+                college
+            </th>
+            <th>
+                contact
+            </th>
+
+        </tr>
+        <tr>
+            <td>
+                saurabh
+            </td>
+            <td>
+                sgm
+            </td>
+            <td>
+                2135435435
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                shubham
+            </td>
+            <td>
+                shivaji uni
+            </td>
+            <td>
+                521453212
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <h1>style to td tag</h1>
+    <table style="width:100%">
+        <caption>student info</caption>
+        <tr>
+            <th>
+                name
+            </th>
+            <th>
+                college
+            </th>
+            <th>
+                contact
+            </th>
+
+        </tr>
+        <tr>
+            <td>
+                saurabh
+            </td>
+            <td>
+                sgm
+            </td>
+            <td style="text-align: right;">
+                2135435435
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                shubham
+            </td>
+            <td>
+                shivaji uni
+            </td>
+            <td style="text-align: right;">
+                521453212
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+
+    <h1>tbody tfoot</h1>
+    <table>
+        <caption>emp</caption>
+        <tr>
+            <th>name</th>
+            <th>sal</th>
+        </tr>
+        <tbody>
+            <td>
+                sp
+            </td>
+            <td>
+                18
+            </td>
+            <tr>
+                <td>
+                    JM
+                </td>
+                <td>
+                    19
+                </td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    total
+                </td>
+                <td>
+                    37
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
