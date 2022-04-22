@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        lists
+    </title>
+    <style>
+        ul.navi {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(14, 12, 12, 0.831);
+        }
+
+        ul.navi li {
+            float: left;
+        }
+
+        ul.navi a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        ul.navi a:hover {
+            background-color: black;
+        }
+
+        .city {
+            background-color: blueviolet;
+            color: rgb(159, 212, 74);
+            padding: 20px;
+        }
+
+        .main {
+            text-align: center;
+        }
+
+        #myheader {
+            font-size: 50px;
+            background-color: gold;
+            color: black;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>lists</h1>
+    <p>unorder list</p>
+    <ul>
+        <li>
+            bike
+        </li>
+        <li>
+            car
+        </li>
+        <li>
+            airoplane
+        </li>
+    </ul>
+    <br><br>
+    <hr>
+    <br>
+    <p>ordered list</p>
+    <ol>
+        <li>bike</li>
+        <li>car</li>
+        <li>airoplane</li>
+    </ol>
+    <br>
+
+    <h3>desription list</h3>
+    <dl>
+        <dt>bike</dt>
+        <dd>honda</dd>
+        <dd>hero</dd>
+        <dt>car</dt>
+        <dd>tata</dd>
+        <dt>airoplane</dt>
+    </dl>
+    <br>
+    <ul style="list-style-type: disc">
+        <li>bike</li>
+        <li>car</li>
+    </ul>
+
+    <ul style="list-style-type:circle;">
+        <li>bike</li>
+        <li>car</li>
+    </ul>
+
+    <br>
+
+    <ul style="list-style-type:square;">
+        <li>bike</li>
+        <li>car</li>
+    </ul>
+    <br>
+
+    <h3>nested list</h3>
+    <ul>
+        <li>
+            bike
+            <ul>
+                <li>honda</li>
+                <li>bajaj</li>
+            </ul>
+        </li>
+        <li>car</li>
+    </ul>
+
+
+    <br>
+    <br>
+
+    <h2>navigation menu/ horizonatl list</h2>
+    <ul class="navi">
+        <li><a href="tables.html">table</a></li>
+        <li><a href="tables1.html">table1</a></li>
+        <li><a href="table2.html">table2</a></li>
+    </ul>
+    <br>
+    <br>
+
+
+    <p>ordered list</p>
+    <ol type="1">
+        <li>bike</li>
+        <li>car</li>
+        <li>airoplane</li>
+    </ol>
+    <br>
+
+    <h2>Multiple Classes</h2>
+    <p class="city main">Karad</p>
+    <p class="city">satara</p>
+    <p class="city">sangali</p>
+
+    <p>ordered list</p>
+    <ol type="A">
+        <li>bike</li>
+        <li>car</li>
+        <li>airoplane</li>
+    </ol>
+    <br>
+
+
+    <p>ordered list</p>
+    <ol type="I">
+        <li>bike</li>
+        <li>car</li>
+        <li>airoplane</li>
+    </ol>
+
+    <p>ordered list control list counting</p>
+    <ol start="50">
+        <li>bike</li>
+        <li>car</li>
+        <li>airoplane</li>
+    </ol>
+
+    <h1>div tag</h1>
+
+    <div style="background-color:black;color:white;padding:20px;">
+        <h2>London</h2>
+        <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a
+            metropolitan area of over 13 million inhabitants.</p>
+        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to
+            its founding by the Romans, who named it Londinium.</p>
+    </div>
+
+    <br>
+
+    <h1>span element</h1>
+    <p>My fish has <span style="color:blue;font-weight:bold">blue</span> eyes and my dog has <span
+            style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+
+    <h1 id="myheader">karad</h1>
+
+    <h1 style="padding: 40px;">IFrame</h1>
+
+    <iframe src="table3.html" height="400" width="400" title="iframe example"></iframe>
+    <h3 style="padding: 60px;">remove border </h3>
+    <iframe src="table3.html" style="border: none; width: 100%;" title="iframe example"></iframe>
+
+    <h1>Iframe - Target for a Link</h1>
+    <iframe src="tables.html" name="iframe_a" style="width: 600px; border: 2px solid orange;" title="iframe"></iframe>
+        <a href="table3.html" target="iframe_a" >tables 3</a>
+
+</body>
+
+
+</html>
