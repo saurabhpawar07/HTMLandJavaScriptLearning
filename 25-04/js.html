@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p>The assignment operator += can concatenate strings.</p>
+    <p id="demo2"></p>
+
+    <script>
+        let x = 5;
+        let text1 = "what a very";
+        text1 += " nice day";
+        //declaring array
+        const cars = ["honda","tata","mahindra"];
+
+        //change an element
+        cars[0] = "toyota";
+
+        //add element
+        cars.push("audi");
+
+        //display array
+        document.getElementById("demo").innerHTML = cars;
+
+        //creating object
+        const bike = {type:"honda", owner:"Saurabh",color:"black"}
+
+        //change property
+        bike.color = "white";
+
+        //add property
+        bike.model = "500"
+
+        //display
+        document.getElementById("demo1").innerHTML = "bike owner" +bike.owner;
+       
+        document.getElementById("demo2").innerHTML = text1;
+        
+        document.getElementById()
+    
+    </script>
+</body>
+</html>
