@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>slice method</h1>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <h2>substring method</h2>
+
+    <p id="demo4"></p>
+    <h2>substr method</h2>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <h2>replace string</h2>
+
+    <button onclick="myfunction()">Try:replace</button>
+    <p id="demo8">Please visit Microsoft!</p>
+
+    <p>replace string replace only first match</p>
+
+    <button onclick="myfunction1()">Try:replace</button>
+    <p id="demo9">Please visit Microsoft and Microsoft!</p>
+
+    <p>By default, the replace() method is case sensitive.<br>
+        Writing MICROSOFT (with upper-case) will not work:<br>
+        To replace case insensitive, use a regular expression
+        with an /i flag (insensitive):
+        Example</p>
+
+    <button onclick="myfunction2()">Try:replace</button>
+    <p id="demo10">Please visit Microsoft!</p>
+
+    <p>to replace all matches</p>
+
+    <button onclick="myfunction3()">Try:replace</button>
+    <p id="demo11">Please visit Microsoft and Microsoft!</p>
+
+    <h2>touppercase & tolowercase</h2>
+
+    <button onclick="myfunction4()">try it:touppercase</button><br><br>
+    <button onclick="myfunction5()">try it:tolowercase</button>
+
+    <p id="demo12">Please visit Microsoft and Microsoft!</p>
+
+    <h1>cocat method: to joint two or more strings</h1>
+
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+
+    <h1>trim()</h1>
+
+    <p id="demo15"></p>
+
+    <h1>​pads a string with another string:</h1>
+
+    <p id="demo16"></p>
+
+    <p>number covert to string & then padding</p>
+    <p id="demo17"></p>
+
+    <p style="font-size: large;">___PadEnd____</p>
+    <p id="demo18"></p>
+
+    <h1>extracting string characters:</h1>
+    <p>using charAt</p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+
+    <p>charcode</p>
+    <!--charcode-->
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+
+    <p>property access on strings: str[]</p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29 "></p>
+
+    <h1>split() method:</h1>
+    <p>A string can be converted to an array with the split() method:</p>
+    <p id="demo30"></p>
+    <p id="demo31"></p>
+    <p id="demo32"></p>
+    <p id="demo33"></p>
+    <p id="demo34"></p>
+    <p id="demo35"></p>
+    <p id="demo36"></p>
+    <p id="demo37"></p>
+
+
+
+
+    <script>
+
+        //declaring string
+        let str = "Saurabh , Jivan , Shubham";
+
+        //slice
+        document.getElementById("demo").innerHTML = str.slice(9, 15);
+        document.getElementById("demo1").innerHTML = str.slice(-15, -9);
+        document.getElementById("demo2").innerHTML = str.slice(9);
+        document.getElementById("demo3").innerHTML = str.slice(-15);
+
+
+        //substring
+        document.getElementById("demo4").innerHTML = str.substring(9, 15);
+
+        //substr
+        document.getElementById("demo5").innerHTML = str.substr(9, 6);
+        document.getElementById("demo6").innerHTML = str.substr(9);
+        document.getElementById("demo7").innerHTML = str.substr(-26);
+
+        //replace string
+        function myfunction() {
+            let text = document.getElementById("demo8").innerHTML;
+            document.getElementById("demo8").innerHTML = text.replace("Microsoft", "W3school");
+        }
+
+        //replace
+        function myfunction1() {
+            let text = document.getElementById("demo9").innerHTML;
+            document.getElementById("demo9").innerHTML = text.replace("Microsoft", "W3school");
+        }
+        //replace 
+        function myfunction2() {
+            let text = document.getElementById("demo10").innerHTML;
+            document.getElementById("demo10").innerHTML = text.replace(/MICROSOFT/i, "W3school");
+        }
+
+        //replace
+        function myfunction3() {
+            let text = document.getElementById("demo11").innerHTML;
+            document.getElementById("demo11").innerHTML = text.replace(/microsoft/g, "w3school");
+
+        }
+
+        //uppercase
+        function myfunction4() {
+            let text = document.getElementById("demo12").innerHTML;
+            document.getElementById("demo12").innerHTML = text.toUpperCase();
+        }
+
+        //lowercase
+        function myfunction5() {
+            let text = document.getElementById("demo12").innerHTML;
+            document.getElementById("demo12").innerHTML = text.toLowerCase();
+        }
+
+        //concat()
+        let text1 = "Hello";
+        let text2 = "World!";
+        let text3 = text1.concat(" ", text2);
+        document.getElementById("demo13").innerHTML = text3;
+
+        let text4 = "Jay";
+        let text5 = "Hind";
+        let text6 = text4.concat(" ", text5);
+        document.getElementById("demo14").innerHTML = text6;
+
+        //trim()
+
+        let text7 = "    hello world!";
+        let text8 = text7.trim();
+        document.getElementById("demo15").innerHTML =
+            "text7 length= " + text7.length + "<br>text8 lenght=" + text8.length;
+
+        //padding
+        let text9 = "5";
+        document.getElementById("demo16").innerHTML = text9.padStart(4, "x");
+
+        //number to string
+        let numb = 5;
+        let text10 = numb.toString();
+        document.getElementById("demo17").innerHTML = text10.padStart(4, 0);
+
+        //padEnd
+
+        let numb1 = 7;
+        let text11 = numb1.toString();
+        document.getElementById("demo18").innerHTML = text11.padEnd(5, "x");
+
+        //Extracting String
+        let text12 = "HELLO WORLD!";
+
+        document.getElementById("demo19").innerHTML = text12.charAt(0);
+        document.getElementById("demo20").innerHTML = text12.charAt(1);
+        document.getElementById("demo21").innerHTML = text12.charAt(2);
+        document.getElementById("demo22").innerHTML = text12.charAt(3);
+        document.getElementById("demo23").innerHTML = text12.charAt(4);
+
+        //charcode The method returns a UTF-16 code 
+        document.getElementById("demo24").innerHTML = text12.charCodeAt(0);
+        document.getElementById("demo25").innerHTML = text12.charCodeAt(1);
+        document.getElementById("demo26").innerHTML = text12.charCodeAt(2);
+
+        //property access on strings: str[]
+        document.getElementById("demo27").innerHTML = text12[0];
+        document.getElementById("demo28").innerHTML = text12[1];
+        document.getElementById("demo29").innerHTML = text12[2];
+
+        /* //string to array
+         let text13 = "a,b,c,d,e,f";
+         const myarray = text13.split(" , ");
+         document.getElementById("30").innerHTML = myarray[0];
+         document.getElementById("31").innerHTML = myarray[1];
+         document.getElementById("32").innerHTML = myarray[2];
+         */
+
+        let text13 = "a,b,c,d,e,f";
+        const myArray = text13.split(",");
+        document.getElementById("demo37").innerHTML = myArray[0];
+
+
+        let text14 = "Hello";
+        const myArr = text14.split("");
+
+        text14 = "";
+        for (let i = 0; i < myArr.length; i++) {
+            text14 += myArr[i] + "<br>"
+        }
+        document.getElementById("demo33").innerHTML = text14;
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

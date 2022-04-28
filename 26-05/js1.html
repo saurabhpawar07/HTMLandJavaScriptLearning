@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo7"></p>
+    <h1>events</h1>
+    <p>on click event</p>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+    <p id="demo"></p>
+    <h2>JavaScript HTML Events</h2>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+    <button onclick="displaydate()">the date is</button>
+    <p id="12"></p>
+    <p>the length of a string:</p>
+    <p id="123"></p>
+    <p>double quoto</p>
+    <p id="demo4"></p>
+    <p>single quoto</p>
+    <p id="demo5"></p>
+    <p>The slice() method extract a part of a string
+        and returns the extracted parts in a new string:</p>
+
+    <p id="demo1"></p>
+    <p>replace text/string in paragraph</p>
+    <p id="demo2">please visit microsoft!</p>
+    <button onclick="myfunction()">try it</button>
+    <p id="demo3">Please visit Microsoft and Microsoft!</p>
+    <button onclick="myfunction2()">replace text as a new string</button>
+
+    <p id="demo6">Please visit Microsoft and Microsoft!</p>
+    <button onclick="myfunction3()">replace text as a new string/casesensitive</button>
+
+    <script>
+        const person = {
+            firstname: "saurabh",
+            lastname: "pawar",
+            id: 234,
+            fullname: function () {
+                return this.firstname + " " + this.lastname;
+            }
+        };
+
+        document.getElementById("demo7").innerHTML = person.fullname();
+
+        function displaydate() {
+            document.getElementById("12").innerHTML = Date();
+        }
+        let text = "Saurabh Pawar"
+        document.getElementById("123").innerHTML = text.length;
+
+        let text1 = "We are the so-called \"Vikings\" from the north.";
+        document.getElementById("demo4").innerHTML = text1;
+
+        let text2 = 'It\'s alright.';
+        document.getElementById("demo5").innerHTML = text2;
+
+        let str = "Apple, Banana, Kiwi";
+        document.getElementById("demo1").innerHTML = str.slice(7, 13);
+
+
+        function myfunction() {
+            let text3 = document.getElementById("demo2").innerHTML;
+            document.getElementById("demo2").innerHTML = 
+            text3.replace("Microsoft","W3school");
+
+        }
+        function myfunction2() {
+            let text4 = document.getElementById("demo3").innerHTML;
+            document.getElementById("demo3") = 
+            text4.replace("Microsoft", "w3school");
+
+        }
+
+        function myfunction3()
+        {
+            let text = Document.getElementById("demo6").innerHTML;
+            document.getElementById("demo6").innerHTML = 
+            text.replace("/microsoft/i", "w3school");
+        }
+    </script>
+</body>
+
+</html>

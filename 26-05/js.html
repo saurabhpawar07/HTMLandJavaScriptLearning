@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p>Array indexes are zero-based, which means the first item is [0].</p>
+
+    <p id="demo2"></p>
+    <h2>JavaScript Objects</h2>
+
+    <p id="demo3"></p>
+
+    <h2> addition using js function</h2>
+    <p id="demo4"></p>
+
+    <h4>Accessing a function without () will return the function definition instead of the function result:</h4>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <script>
+        var s = myfunction(4, 3);
+        let x = 16 + 4 + "Volvo";
+        document.getElementById("demo").innerHTML = x;
+
+
+        let y = "Volvo" + 16 + 4;
+        document.getElementById("demo1").innerHTML = y;
+        const cars = ["Saab", "Volvo", "BMW"];
+         document.getElementById("demo2").innerHTML = cars[0];
+
+
+        const person = {
+            firstName : "John",
+            lastName : "Doe",
+            age : 50,
+            eyeColor : "blue"
+        };
+        document.getElementById("demo3").innerHTML =
+            person.firstName + " is " + person.age + " years old.";
+
+
+        document.getElementById("demo4").innerHTML = s;
+        function myfunction(p1, p2) {
+            return p1 + p2;
+        }
+
+
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+        document.getElementById("demo5").innerHTML = toCelsius;
+
+
+        document.getElementById("demo6").innerHTML =
+            "The temperature is " + toCelsius1(86) + " Celsius";
+
+        function toCelsius1(fahrenheit) {
+            return (5 / 9) * (fahrenheit - 32);
+        }
+
+
+        const cars = 
+        {                                 //creating object
+            type :"suv",
+            company :"TATA",
+            model :"Safari"
+        }
+
+        document.getElementById("demo7").innerHTML = cars.type ;   // Display some data from the object:
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
