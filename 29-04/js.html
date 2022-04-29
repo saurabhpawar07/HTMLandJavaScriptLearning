@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29-04</title>
+</head>
+
+<body>
+
+    <h1>string search</h1>
+    <p>JavaScript String indexOf()</p>
+    <p>String:Please locate where 'locate' occurs!</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <p> // last occurrence of a specified text in a string:</p>
+    <p id="demo4"></p>
+
+    <p> //absent strings gets output -1</p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+
+    <p>JavaScript String search()</p>
+    <p id="demo9"></p>
+
+    <p>JavaScript String match()</p>
+    <p> string: The rain in SPAIN stays mainly in the plain</p>
+    <p id="demo10"></p>
+    <p>global matchh</p>
+    <p id="demo11"></p>
+
+    <p>Check if a string includes "world":</p>
+    <p>The rain in SPAIN stays mainly in the plain</p>
+    <p id="demo12"></p>
+
+    <p>startWith()</p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+
+    <p>endswith()</p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+
+
+
+
+
+
+    <script>
+
+        let str = "Please locate where 'locate' occurs!";
+
+        document.getElementById("demo1").innerHTML = "locate = " + str.indexOf("locate");
+        document.getElementById("demo2").innerHTML = "please = " + str.indexOf("Please");
+        document.getElementById("demo3").innerHTML = "occurs!= " + str.indexOf("occurs!");
+
+        // last occurrence of a specified text in a string
+        document.getElementById("demo4").innerHTML = "locate=" + str.lastIndexOf("locate");
+
+        //absent strings gets output -1
+        document.getElementById("demo5").innerHTML = "saurabh = " + str.lastIndexOf("saurabh");
+        document.getElementById("demo6").innerHTML = "saurabh = " + str.lastIndexOf("saurabh");
+
+        document.getElementById("demo7").innerHTML = " locate = " + str.lastIndexOf("locate", 15);
+        document.getElementById("demo8").innerHTML = " locate = " + str.indexOf("locate", 15);
+
+        //search
+        document.getElementById("demo9").innerHTML = " locate = " + str.search("locate");
+
+        //JavaScript String match()
+        let text = "The rain in SPAIN stays mainly in the plain";
+        document.getElementById("demo10").innerHTML = text.match(/ain/g);
+        document.getElementById("demo11").innerHTML = text.match(/ain/gi);  //global match
+
+        //JavaScript String include()
+        document.getElementById("demo12").innerHTML = "mainly is present = " + text.includes("mainly");
+        document.getElementById("demo12").innerHTML = "Hello is present = " + text.includes("Hello");
+        document.getElementById("demo12").innerHTML = "The after 20 is present = " + text.includes("the" ,20);
+
+        //startwith()
+        document.getElementById("demo13").innerHTML = "starts with The is " + text.startsWith("The");
+        document.getElementById("demo14").innerHTML = text.startsWith("rain",4);
+
+        //endWith()
+        document.getElementById("demo15").innerHTML = "ends with plain is " + text.endsWith("plain");
+        document.getElementById("demo16").innerHTML = text.endsWith("rain", 8);
+
+
+</script>
+</body>
+
+</html>
