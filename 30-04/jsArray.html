@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <h2>JavaScript Arrays</h2>
+    <p>brands</p>
+    <p id="demo"></p>
+    <p>cars</p>
+    <p id="demo1"></p>
+
+    <p id="demo2"></p>
+
+    <p>changing value</p>
+    <p id="demo3"></p>
+
+
+
+    <p>JavaScript uses names to access object properties.</p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
+
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+
+
+    <script>
+
+        //declaring array
+
+        const brands = ["Suzuki", "honda", "bajaj"];
+        document.getElementById("demo").innerHTML = brands;
+        document.getElementById("demo5").innerHTML = brands.length;
+        document.getElementById("demo6").innerHTML = brands[brands.length-1];
+        const cars = [];
+        cars[0] = "Saab";
+        cars[1] = "Volvo";
+        cars[2] = "BMW";
+        document.getElementById("demo1").innerHTML = cars;
+        // document.getElementById("demo5").innerHTML = cars.lenght;
+
+        const cars1 = new Array("Saab", "Volvo", "BMW");
+        document.getElementById("demo2").innerHTML = cars1 + "<br>" +
+            cars1[1];
+        //changing value
+        cars1[1] = "TaTa";
+        document.getElementById("demo3").innerHTML = cars1[1];
+
+        const person = { firstName: "saurabh", lastName: "pawar", age: 46 };
+        document.getElementById("demo4").innerHTML = person.firstName;
+        //document.getElementById("demo5").innerHTML = person.lenght;
+
+        const brands1 = ["Suzuki", "honda", "bajaj"];
+        let blen = brands1.length;
+
+        let text = "<ul>";
+            for( let i = 0; i < blen; i++) {
+                text += "<li>" + brands[i] + "</li>";
+            }
+            text += "</ul>";
+            document.getElementById("demo7").innerHTML = text;
+
+            let text1 = "<ul>";
+                brands1.forEach(myfunction);
+                text1+= "</ul>";
+
+                document.getElementById("demo8").innerHTML = text1;
+
+                function myfunction(value) {
+                    text1 += "<li>" + value + "</li>";
+                }
+          
+
+
+
+    </script>
+</body>
+
+</html>
