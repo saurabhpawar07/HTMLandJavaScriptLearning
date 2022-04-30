@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsNumber</title>
+</head>
+
+<body>
+    <p id="d1"></p>
+
+    <p>Floating point arithmetic is not always 100% accurate.</p>
+
+    <p id="demo"></p>
+
+    <p>Floating point arithmetic is not always 100% accurate:</p>
+    <p id="demo1"></p>
+
+    <p>But it helps to multiply and divide:</p>
+
+    <p id="demo2"></p>
+
+    <p>JavaScript will try to convert strings to numbers when dividing:</p>
+
+    <p id="demo3"></p>
+    <p>JavaScript will try to convert strings to numbers when multiplying:</p>
+    <p id="demo4"></p>
+
+
+    <p>JavaScript will try to convert strings to numbers when subtracting:</p>
+
+    <p id="demo5"></p>
+
+    <p>A number divided by a non-numeric string becomes NaN (Not a Number):</p>
+
+    <p id="demo6"></p>
+
+    <p>Infinity is returned if you calculate a number outside the largest possible number:</p>
+
+    <p id="demo7"></p>
+
+    <p>Division by zero generates Infinity;</p>
+
+    <p id="demo8"></p>
+    <p>Numeric constants, preceded by 0x, are interpreted as hexadecimal:</p>
+
+    <p id="demo9"></p>
+
+    <p>The toString() method can output numbers from base 2 to 36:</p>
+    <p id="demo10"></p>
+
+
+
+
+
+
+    <script>
+        let x = 123e5;
+        let y = 123e-5;
+        document.getElementById("d1").innerHTML = "123e5 = " + x + "<br>" + "123e-5 = " + y;
+
+        let z = 0.2 + 0.1;
+        document.getElementById("demo").innerHTML = "0.2 + 0.1 = " + z;
+
+        let x1 = 0.2 + 0.1;
+        document.getElementById("demo1").innerHTML = "0.2 + 0.1 = " + x1;
+        let y1 = (0.2 * 10 + 0.1 * 10) / 10;
+        document.getElementById("demo2").innerHTML = "0.2 + 0.1 = " + y1;
+
+        let x2 = "100";
+        let y2 = "10";
+        let z2 = x2 / y2;
+        let z4 = x2 * y2;
+        let z3 = x2 - y2;
+        let z5 = x2 / "apple"
+
+        document.getElementById("demo3").innerHTML = z2;
+        document.getElementById("demo4").innerHTML = z4;
+        document.getElementById("demo5").innerHTML = z3;
+        document.getElementById("demo6").innerHTML = "z5 = x2 / apple is:" + z5;
+
+        let numb = 2;
+        let text = "";
+        while (numb != Infinity) {
+            numb = numb * numb;
+            text = text + numb + "<br>";
+        }
+        document.getElementById("demo7").innerHTML = text;
+
+        let x3 = 2 / 0;
+        let y3 = -2 / 0;
+        document.getElementById("demo8").innerHTML = x3 + "<br>" + y3;
+
+        let x4 = 0xFF;
+        document.getElementById("demo9").innerHTML = "0xFF = " + x4;
+
+        //numbers from base 2 to 36:
+
+        let x5 = 32;
+        document.getElementById("demo10").innerHTML =
+            "Hexatrigesimal (base 36): " +x5.toString(36) + "<br>" +
+            "Duotrigesimal (base 32): " + x5.toString(32) + "<br>" +
+            "Hexadecimal (base 16): " + x5.toString(16) + "<br>" +
+            "Duodesimal (base 12): " + x5.toString(12) + "<br>" +
+            "Desimal (base 10): " + x5.toString(10) + "<br>" +
+            "Octal (base 8): " + x5.toString(8) + "<br>" +
+            "Binary (base 2): " + x5.toString(2);
+
+
+    </script>
+</body>
+
+</html>
