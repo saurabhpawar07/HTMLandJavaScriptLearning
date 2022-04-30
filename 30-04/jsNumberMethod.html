@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number method</title>
+</head>
+
+<body>
+    <p>The toString() method converts a number to a string.</p>
+
+    <p id="demo"></p>
+
+    <p>toexpotional() ,tofixed(), toprcision()</p>
+    <p id="demo1"></p>
+
+    <p>The valueOf() method returns a number as a number:</p>
+    <p id="demo2"></p>
+
+    <p>number() : returns a number from its argument </p>
+    <p id="demo3"></p>
+    <p>The Number() method can convert a date to a number:</p>
+    <p id="demo4"></p>
+
+    <p>The global JavaScript function parseInt() converts strings to numbers:</p>
+    <p id="demo5"></p>
+
+    <p>The global JavaScript function parsefloat() converts strings to numbers:</p>
+    <p id="demo6"></p>
+
+    <p>MAX_VALUE returns the largest possible number in JavaScript.</p>
+
+    <p id="demo7"></p>
+
+    <p>MIN_VALUE returns the smallest number possible in JavaScript.</p>
+
+    <p id="demo8"></p>
+
+    <p>POSITIVE_INFINITY</p>
+
+    <p id="demo9"></p>
+
+    <p>NEGATIVE_INFINITY</p>
+
+    <p id="demo10"></p>
+
+
+
+
+
+
+
+
+    <script>
+        let x = 123;
+        document.getElementById("demo").innerHTML =
+            x.toString() + "<br>" +
+            (123).toString() + "<br>" +
+            (110 + 13).toString();
+        //tovalue()
+        document.getElementById("demo2").innerHTML =
+            x.valueOf() + "<br>" +
+            (123).valueOf() + "<br>" +
+            (100 + 23).valueOf();
+
+        //toexpotional() , tofixed() , toprcision()
+        let y = 8.656;
+        document.getElementById("demo1").innerHTML =
+            y.toExponential() + "<br>" +
+            y.toExponential(2) + "<br>" +
+            y.toExponential(4) + "<br>" +
+            y.toFixed() + "<br>" +
+            y.toFixed(2) + "<br>" +
+            y.toFixed(3) + "<br>" +
+            y.toPrecision() + "<br>" +
+            y.toPrecision(2) + "<br>" +
+            y.toPrecision(4) + "<br>";
+
+        //number() : returns a number from its argument
+        document.getElementById("demo3").innerHTML =
+            Number(true) + "<br>" +
+            Number(false) + "<br>" +
+            Number(10) + "<br>" +
+            Number("10") + "<br>" +
+            Number("  10") + "<br>" +
+            Number("10  ") + "<br>" +
+            Number("10.33") + "<br>" +
+            Number("10,33") + "<br>" +
+            Number("10 33") + "<br>" +
+            Number("saurabh");
+
+        //The Number() method can convert a date to a number:
+        let z = new Date("1970-01-02");
+        document.getElementById("demo4").innerHTML = Number(z);
+
+        //The global JavaScript function parseInt() converts strings to numbers:
+        document.getElementById("demo5").innerHTML =
+            parseInt(10) + "<br>" +
+            parseInt("10") + "<br>" +
+            parseInt("  10") + "<br>" +
+            parseInt("10  ") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10,33") + "<br>" +
+            parseInt("10 33") + "<br>" +
+            parseInt("10 saurabh") + "<br>" +
+            parseInt("sautabh 10");
+
+        //parsefloat()
+        document.getElementById("demo6").innerHTML =
+            parseFloat("10") + "<br>" +
+            parseFloat("10.33") + "<br>" +
+            parseFloat("10 6") + "<br>" +
+            parseFloat("10 years") + "<br>" +
+            parseFloat("years 10");
+
+        //MAX_VALUE returns the largest possible number in JavaScript.
+        let x1 = Number.MAX_VALUE;
+        document.getElementById("demo7").innerHTML = x1;
+
+        //>MIN_VALUE returns the smallest number possible in JavaScript.
+        let x2 = Number.MIN_VALUE;
+        document.getElementById("demo8").innerHTML = x2;
+
+        //POSITIVE_INFINITY
+        let x3 = Number.POSITIVE_INFINITY;
+        document.getElementById("demo9").innerHTML = x3;
+
+        //NEGATIVE_INFINITY
+        let x = Number.NEGATIVE_INFINITY;
+        document.getElementById("demo").innerHTML = x;
+
+
+
+
+    </script>
+</body>
+
+</html>
